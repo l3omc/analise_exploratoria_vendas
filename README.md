@@ -1,4 +1,4 @@
-# {Análise exploratória de vendas}
+# Análise exploratória de vendas
 
 Este repositório contém um projeto desenvolvido utilizando python. Neste arquivo README, você encontrará um guia passo a passo de como foi realizada está análise.  
 
@@ -19,7 +19,7 @@ Caso não tenha os pacotes instalados utilize o seguinte comando para instala-lo
 
 -------
 
-~~~
+~~~python
 
 pip install pandas  
 pip install seaborn
@@ -62,7 +62,7 @@ Como objetivo do projeto é realizar as seguintes análises responder as seguint
 
 ### Passo 1: Importando Pacotes 
 
-~~~
+~~~python
 import pandas as pd 
 import seborn as sns
 import matplotlib.pyplot as plt
@@ -70,7 +70,7 @@ import matplotlib.pyplot as plt
 
 Depois de importar os pacotes, carregaremos o arquivo csv, e abriremos o mesmo para termos uma visão geral e preliminar do arquivo.   
 
-~~~
+~~~python
 
 arquivo = pd.read_csv("DADOS/Sales Data.csv")
 arquivo.head()
@@ -79,7 +79,7 @@ arquivo.head()
 
 A pasta DADOS é o diretório onde está o arquivo csv no meu computador,  
 
-![Tabela 1](IMAGENS/Imagem 1.png "DataFrame 1 ")  
+![Tabela 1](https://github.com/l3omc/analise_exploratoria_vendas/blob/main/IMAGENS/Imagem%201.png)
 
 Verificando os diferentes tipos de produtos 
 
@@ -89,11 +89,10 @@ arquivo['Product'].unique()
 
 ~~~
 
-Cuja a saída foi,
+Cuja a saída foi,  
+![Imagem 2](https://github.com/l3omc/analise_exploratoria_vendas/blob/main/IMAGENS/imagem%202.png)  
 
-![Saida](IMAGENS/imagem 2.png "Saída Nome colunas ")  
-
-Agora vamos plotar os produtos x preços .  
+Agora vamos plotar os produtos x preços .    
 
 ~~~python
 
@@ -112,7 +111,7 @@ plt.tight_layout()
 
 A saída  em um grafíco de barras comparando os preços de cada produto.    
 
-![Gráfico 1](IMAGENS/Imagem 40.png "Gráfico 1 ")   
+![Gráfico 1](https://github.com/l3omc/analise_exploratoria_vendas/blob/main/IMAGENS/Imagem%2040.png)   
 
 Com base no gráfico, ou até uma análise no próprio arquivo, já respondemos a primeira pergunta. O produto mais caro é o Macbook pro  1700 dolares.   
 Agora vamos ver quantos itens foram vendidos de cada item.
@@ -133,7 +132,7 @@ arquivos_novos
 Usando o groupby para  somar os pedidos, somar cada compra  e verificar a quantidade de itens vendidos de cada produto  e somando o valor  total de venda .    
  
 
-![tabela 2](/home/leonardo/Área de trabalho/MEGA/SCRIPTS PYTHON/SCRIPTS PYTHON/SCRIPTS/TREINAMENTOS/analise_dados/ANALISE EXPLORATORIA UDEMY/IMAGENS/Imagem 6.png  "DataFrame 2 ")
+![tabela 2](https://github.com/l3omc/analise_exploratoria_vendas/blob/main/IMAGENS/Imagem%206.png)
 
 Nesta tabela podemos ver os itens mais vendidos e  os produtos que mais renderam lucro para as lojas e o preço de venda.   
 Para visualizar em gráfico essas informações vamos plota-las    
@@ -155,7 +154,7 @@ plt.tight_layout()
 
 ~~~
 
-![Gráfico 2](IMAGENS/Imagem 8.png " Gráfico 2 ")   
+![Gráfico 2](https://github.com/l3omc/analise_exploratoria_vendas/blob/main/IMAGENS/Imagem%208.png)  
 
 
 Agora vamos ver o valor do lucro nas vendas.   
@@ -174,7 +173,7 @@ plt.tight_layout()
 
 ~~~
 
-![Gráfico 2](IMAGENS/Imagem 70.png " Gráfico 3 ")  
+![Gráfico 2](https://github.com/l3omc/analise_exploratoria_vendas/blob/main/IMAGENS/Imagem%2070.png)  
 
 
 Na tabela e gráficos acima podemos responder as perguntas em relação a quantidade e valor total dos macbooks vendidos sendo um total de 4728 unidades e mais de 8030800.00 dolares em vendas.    
@@ -222,7 +221,7 @@ plt.tight_layout()
 
 Esse gráfico achei interessante pois compara cada cidade poderia gerar vários gráficos, mas achei esse intuitivo.
  
- ![Gráfico 2](IMAGENS/Imagem 90.png "Gráfico 4 ")  
+ ![Gráfico 2](https://github.com/l3omc/analise_exploratoria_vendas/blob/main/IMAGENS/Imagem%2090.png)  
 
 Assim podemos ver que Nova York é a cidade que mais vende produtos em todos os meses. No entanto essa informação não responde nenhuma das perguntas. Vamos lá, as perguntas são:
 
@@ -244,7 +243,7 @@ Medias_mes = arquivo.groupby([ "Month"]).agg({
 
 ~~~
 
-![DataFrame 2](IMAGENS/Imagem 92.png " DataFrame 3 " )  
+![DataFrame 2](https://github.com/l3omc/analise_exploratoria_vendas/blob/main/IMAGENS/Imagem%2092.png)  
 
 Com isso respondemos a média de vendas no mês de setembro, 180 mil dolares, com um total de 13 mil pedidos,Também sabemos que o mês que mais tem vendas é o Dezembro, podemos separar por Cidade, para ter uma ideia do faturamento por cidade olhando o gráfico que vem depois (gráfico alguma numero), separando por cidade e soma mensal de vendas de produtos.  
 
@@ -262,7 +261,7 @@ Medias_hora
 
 ~~~
   
- ![DataFrame 4](IMAGENS/Imagem 93.png " DataFrame 4 ")  
+ ![DataFrame 4](https://github.com/l3omc/analise_exploratoria_vendas/blob/main/IMAGENS/Imagem%2093.png)  
  
  Como podemos ver na tabela o horário em que se tem mais vendas é as 19 horas.    
  
@@ -277,7 +276,7 @@ Medias_Cidade
 
 ~~~
 
- ![DataFrame 5](IMAGENS/Imagem 94.png " DataFrame 5 ")  
+ ![DataFrame 5](https://github.com/l3omc/analise_exploratoria_vendas/blob/main/IMAGENS/Imagem%2094.png)  
 
 
 Com  a tabela acima vemos a média de vendas e de pedidos em todas as cidades incluindo Dallas com um pouco mais de 16 mil pedidos e 186 mil dolares .
